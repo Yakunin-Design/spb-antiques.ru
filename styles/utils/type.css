@@ -1,0 +1,56 @@
+/* Playfair Display */
+
+@font-face {
+    font-family: "Playfair", serif;
+    font-weight: bold;
+    src: url("../../assets/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Playfair", serif;
+    font-weight: normal;
+    src: url("../../assets/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+}
+
+/* PT serif */
+
+@font-face {
+    font-family: "PT serif", serif;
+    font-weight: normal;
+    src: url("../../assets/fonts/PTSerif-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "PT serif", serif;
+    font-weight: bold;
+    src: url("../../assets/fonts/PTSerif-Bold.woff2") format("woff2");
+}
+
+/* Gilroy */
+
+@font-face {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 500;
+    src: url("../../assets/fonts/Gilroy-Medium.woff2") format("woff2");
+}
+
+/* Type */
+
+h1 {
+    font-weight: bold;
+    font-size: 6.5vmin;
+    letter-spacing: 0.05rem;
+    font-family: "Playfair Display";
+}
+
+h2 {
+    font-family: "Playfair Display";
+}
+
+h3 {
+    font-family: "Playfair Display";
+}
+
+p {
+    font-size: 1rem;
+}

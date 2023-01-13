@@ -1,0 +1,18 @@
+.main {
+    height: 100vh;
+    width: 100%;
+
+    color: var(--light);
+    background: var(--dark);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    padding: 0.6rem 2.3em;
+    border: 1px solid var(--light);
+    font-size: 1rem;
+}

@@ -1,0 +1,19 @@
+.header {
+    position: fixed;
+    top: 25px;
+    width: calc(100% - 50px);
+
+    padding: 1.5rem 1em;
+    border-radius: 0.8rem;
+
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.test {
+    font-family: "Gilroy";
+    font-weight: 500;
+    color: var(--light);
+}
