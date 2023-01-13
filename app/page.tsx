@@ -1,5 +1,9 @@
 import Container from "@/components/std/Container";
 import Spacer from "@/components/std/Spacer";
+
+import BenefitsSection from "./BenefitsSection";
+import ContactsSection from "./ContactsSection";
+
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -21,7 +25,14 @@ export default function Home() {
                     </button>
                 </Container>
             </main>
-            <Spacer top="120"/>
+
+            <Container>
+                <Spacer top="2" />
+                <BenefitsSection />
+                <Spacer top="2" />
+                <ContactsSection />
+            </Container>
+            <Spacer top="120" />
         </>
     );
 }

@@ -1,3 +1,12 @@
+import styles from "./footer.module.css"
+
 export default function Footer() {
-    return <h1>This is footer</h1>;
+    return <footer className={styles.footer}>
+        <p className={styles.copyright}>
+        © Designed by {" "} 
+        <a href="https://yakunin.io">
+            Yakunin Design Team
+        </a>
+        </p>        
+    </footer>;
 }
