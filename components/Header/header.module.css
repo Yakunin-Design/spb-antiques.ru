@@ -1,12 +1,19 @@
 .header {
     position: fixed;
     top: 25px;
-    width: calc(100% - 50px);
+    width: 100%;
+    margin: 0;
+    z-index: 3;
+}
 
+.header_block {
     padding: 1.5rem 1em;
     border-radius: 0.8rem;
 
-    background: rgba(255, 255, 255, 0.15);
+    max-width: 1200px !important;
+    margin: 0 auto;
+
+    background: rgba(216, 216, 216, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);

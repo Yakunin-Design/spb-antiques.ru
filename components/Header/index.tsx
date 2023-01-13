@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <Container>
-            <header className={styles.header}>
+        <header className={styles.header}>
+            <Container className={styles.header_block}>
                 <Row>
                     <Link href="/">
                         <h3 className={styles.test}>Antiques</h3>
@@ -16,7 +16,7 @@ export default function Header() {
                         <h3 className={styles.test}>Контакты</h3>
                     </Link>
                 </Row>
-            </header>
-        </Container>
+            </Container>
+        </header>
     );
 }
