@@ -9,15 +9,27 @@ export default function ContactsSection() {
                 <Spacer top="2" />
                 <div>
                     <p className={styles.type}>Email</p>
-                    <p className={styles.text}>contact@antiques.com</p>
+                    <a
+                        className={styles.text}
+                        href="mailto: contact@antiques.com"
+                    >
+                        contact@antiques.com
+                    </a>
                 </div>
                 <div className={styles.contact}>
                     <p className={styles.type}>Наш номер телефона</p>
-                    <p className={styles.text}>+7 911 123 45 67</p>
+                    <a className={styles.text} href="+79111234567">
+                        +7 911 123 45 67
+                    </a>
                 </div>
                 <div className={styles.contact}>
                     <p className={styles.type}>Альтернативные варианты связи</p>
-                    <p className={styles.text}>whats up</p>
+                    <a
+                        className={styles.text}
+                        href="https://api.whatsapp.com/send?phone=79111234567"
+                    >
+                        whats up
+                    </a>
                 </div>
             </section>
         </>

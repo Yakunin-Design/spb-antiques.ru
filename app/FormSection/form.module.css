@@ -1,0 +1,76 @@
+.input {
+    width: 100%;
+    background: transparent;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid var(--dark);
+    margin-top: 2rem;
+    font-size: 15px;
+    font-family: "PT serif";
+}
+
+.input::placeholder {
+    font-size: 15px;
+    font-family: "PT serif";
+}
+
+.photo {
+    margin-top: 2rem;
+    width: 100%;
+    border: 1px solid var(--dark);
+    padding: 0.5rem 2em;
+    text-align: center;
+    color: var(--dark);
+    font-family: "PT serif";
+}
+
+.photo:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.send {
+    margin-top: 3rem;
+    width: 100%;
+    border: 1px solid var(--dark);
+    padding: 1rem 2em;
+    text-align: center;
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+.shorts {
+    display: flex;
+    flex-direction: column;
+}
+
+.hiden {
+    opacity: 0;
+}
+
+.error {
+    border-color: red;
+    color: red;
+}
+
+.error::placeholder {
+    color: red;
+}
+
+@media (min-width: 775px) {
+    .shorts {
+        flex-direction: row;
+        gap: 2em;
+    }
+    .input {
+        margin-top: 1.5rem;
+    }
+    .first {
+        margin-top: 2rem;
+    }
+    .photo {
+        margin-top: 1.5rem;
+    }
+    .send {
+        margin-top: 2rem;
+    }
+}

@@ -10,18 +10,18 @@ export default function Header() {
     const [dark, set_dark] = useState(false);
 
     window.addEventListener("scroll", function (e) {
-        if (window.pageYOffset >= 800) {
+        if (window.pageYOffset >= window.innerHeight) {
             dark != true && set_dark(true);
         } else {
             dark != false && set_dark(false);
         }
     });
     const text_style = dark ? styles.dark : styles.light;
-    console.log(text_style);
+    const header_style = dark ? styles.header_dark : styles.header_light;
 
     return (
         <Container className={styles.header}>
-            <header className={styles.header_block}>
+            <header className={styles.header_block + " " + header_style}>
                 <Row>
                     <Link href="/">
                         <h3 className={styles.test + " " + text_style}>

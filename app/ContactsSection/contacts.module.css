@@ -7,9 +7,22 @@
     font-size: 20px;
     font-weight: bold;
     font-family: "PT serif";
+    color: var(--dark);
 }
 
 .type {
-    color: #a4a188;
+    color: #7a7a7a;
     font-family: "PT serif";
+}
+
+@media (min-width: 650px) {
+    .contact {
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 775px) {
+    .contact {
+        margin-top: 2.7rem;
+    }
 }

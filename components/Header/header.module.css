@@ -15,11 +15,17 @@
 .header_block {
     padding: 1.5rem 1em;
     border-radius: 0.8rem;
-
-    background: rgba(216, 216, 216, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
+}
+
+.header_light {
+    background: rgba(216, 216, 216, 0.1);
+}
+
+.header_dark {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .light {
