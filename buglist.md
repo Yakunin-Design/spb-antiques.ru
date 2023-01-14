@@ -1,15 +1,17 @@
-# How do we work
+# Buglist for [spb-antiques.ru](./README.md)
+
+## How do we work
 section is missing (design is missing as well)
 
-# Benefits
+## Benefits
 icons are missing
 
-# What do we buy
+## What do we buy
 section is missing
 
-# Fonts
+## Fonts
 fonts do not render 
 
-# Form 
+## Form 
 lack of image support
 data is't beeing sent
