@@ -1,10 +1,15 @@
-# Colors
+# How do we work
+section is missing (design is missing as well)
 
-dark #212121
-light #F0EDD5
+# Benefits
+icons are missing
+
+# What do we buy
+section is missing
 
 # Fonts
+fonts do not render 
 
-Playfair Display
-PT serif
-
+# Form 
+lack of image support
+data is't beeing sent

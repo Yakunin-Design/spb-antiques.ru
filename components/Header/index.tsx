@@ -4,18 +4,11 @@ import Container from "@/components/std/Container";
 import styles from "./header.module.css";
 
 import Link from "next/link";
-import { useState } from "react";
+import change_color from "./change_color";
 
 export default function Header() {
-    const [dark, set_dark] = useState(false);
+    const { dark } = change_color();
 
-    window.addEventListener("scroll", function (e) {
-        if (window.pageYOffset >= window.innerHeight) {
-            dark != true && set_dark(true);
-        } else {
-            dark != false && set_dark(false);
-        }
-    });
     const text_style = dark ? styles.dark : styles.light;
     const header_style = dark ? styles.header_dark : styles.header_light;
 
