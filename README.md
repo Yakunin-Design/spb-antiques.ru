@@ -4,7 +4,7 @@ Website for antiques shop located in Saint-Petersburg, Russia. Build with nextjs
 
 ## Buglist
 
-You can fing [Buglist here](./buglist.md)
+You can find [Buglist here](./buglist.md)
 
 ## Demo
 Currently demo version can be viewed here: [yakunin.io](https://yakunin.io)
