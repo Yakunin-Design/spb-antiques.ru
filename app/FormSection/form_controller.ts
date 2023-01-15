@@ -1,7 +1,14 @@
 import { useState } from "react";
 
+type form_data = {
+    position: string;
+    tel: string;
+    mail: string;
+    photo: Array<string | ArrayBuffer | null>;
+};
+
 export default function form_controller() {
-    const [form_data, set_form_data] = useState({
+    const [form_data, set_form_data] = useState<form_data>({
         position: "",
         tel: "",
         mail: "",
@@ -13,17 +20,17 @@ export default function form_controller() {
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         const { name, value, files } = event.target;
 
-        // if (name === "photo") {
-        //     const reader = new FileReader();
-        //     reader.addEventListener("load", function () {
-        //         set_form_data(prev => {
-        //             return {
-        //                 ...prev,
-        //                 photo: [...prev.photo, this.result],
-        //             };
-        //         });
-        //     });
-        // }
+        if (name === "photo") {
+            const reader = new FileReader();
+            reader.addEventListener("load", function () {
+                set_form_data(prev => {
+                    return {
+                        ...prev,
+                        [name]: [...prev.photo, this.result],
+                    };
+                });
+            });
+        }
 
         set_form_data(prev => {
             return { ...prev, [name]: value };
@@ -42,7 +49,10 @@ export default function form_controller() {
             set_errors(error);
         } else {
             set_errors([]);
-            //send to api
+            fetch("/api/send_message", {
+                method: "POST",
+                body: JSON.stringify(form_data),
+            });
         }
     }
 

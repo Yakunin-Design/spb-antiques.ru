@@ -2,11 +2,11 @@
 import styles from "./form.module.css";
 import form_controller from "./form_controller";
 
-export default function FormSection() {
+export default function FormSection({ className }: { className: string }) {
     const { form_data, handleChange, errors, submit } = form_controller();
 
     return (
-        <>
+        <div className={className}>
             <h2>Онлайн оценка</h2>
             <form>
                 <input
@@ -66,6 +66,6 @@ export default function FormSection() {
                     Отправить
                 </p>
             </form>
-        </>
+        </div>
     );
 }

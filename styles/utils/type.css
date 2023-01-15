@@ -1,35 +1,36 @@
 /* Playfair Display */
 
 @font-face {
-    font-family: "Playfair", serif;
+    font-family: "PlayfairDisplay";
     font-weight: bold;
-    src: url("../../assets/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+    src: url("../../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Playfair", serif;
+    font-family: "PlayfairDisplay";
     font-weight: normal;
-    src: url("../../assets/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+    src: url("../../assets/fonts/PlayfairDisplay-Regular.ttf")
+        format("truetype");
 }
 
 /* PT serif */
 
 @font-face {
-    font-family: "PT serif", serif;
+    font-family: "PT serif";
     font-weight: normal;
-    src: url("../../assets/fonts/PTSerif-Regular.woff2") format("woff2");
+    src: url("../../assets/fonts/PTSerif-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "PT serif", serif;
+    font-family: "PT serif";
     font-weight: bold;
-    src: url("../../assets/fonts/PTSerif-Bold.woff2") format("woff2");
+    src: url("../../assets/fonts/PTSerif-Bold.ttf") format("truetype");
 }
 
 /* Gilroy */
 
 @font-face {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy";
     font-weight: 500;
     src: url("../../assets/fonts/Gilroy-Medium.woff2") format("woff2");
 }
@@ -40,15 +41,19 @@ h1 {
     font-weight: bold;
     font-size: 6.5vmin;
     letter-spacing: 0.05rem;
-    font-family: "Playfair Display";
+    font-family: "PlayfairDisplay", serif;
 }
 
 h2 {
-    font-family: "Playfair Display";
+    font-family: "PlayfairDisplay", serif;
 }
 
 h3 {
-    font-family: "Playfair Display";
+    font-family: "PlayfairDisplay", serif;
+}
+
+h4 {
+    font-family: "PlayfairDisplay", serif;
 }
 
 p {

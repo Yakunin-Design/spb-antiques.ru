@@ -21,11 +21,14 @@
     text-align: center;
     color: var(--dark);
     font-family: "PT serif";
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .photo:hover {
     background-color: var(--dark);
     color: var(--light);
+    transition: 0.5s;
 }
 
 .send {
@@ -36,6 +39,7 @@
     text-align: center;
     color: var(--light);
     background-color: var(--dark);
+    cursor: pointer;
 }
 
 .shorts {

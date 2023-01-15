@@ -72,6 +72,15 @@ input {
     appearance: none;
 }
 
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="tel"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 input::-moz-placeholder {
     font-family: "Playfair Display";
     font-size: 1rem;

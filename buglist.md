@@ -1,26 +1,22 @@
 # Buglist for [spb-antiques.ru](./README.md)
 
 ## How do we work
-+ section is missing (design is missing as well)
+
+-   section is missing (design is missing as well)
 
 ## Benefits
-+ icons are missing
+
+-   icons are missing
 
 ## What do we buy
-+ section is missing
 
-## Fonts
-+ fonts do not render 
+-   set image, names and price
+-   mobile onclick animation
 
-## Form 
-+ lack of image support
-+ data is't beeing sent
+## Form
 
-## Inputs
-+ safari renders inputs round fsr
+-   send message in api
 
 ## Contact links
-+ change contact links to be correct
 
-## Hero
-+ hero button hover ?
+-   change contact links to be correct

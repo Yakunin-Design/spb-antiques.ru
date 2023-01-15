@@ -1,0 +1,42 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cards_min {
+    display: flex;
+    gap: 1em;
+    overflow-y: scroll;
+}
+
+.cards_min::-webkit-scrollbar {
+    display: none;
+}
+.cards_min {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.middle {
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 580px) {
+    .cards_min {
+        display: flex;
+        gap: 1em;
+    }
+}
+
+@media (min-width: 1100px) {
+    .row {
+        flex-direction: row;
+    }
+}

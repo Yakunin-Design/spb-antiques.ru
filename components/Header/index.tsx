@@ -21,11 +21,11 @@ export default function Header() {
                             Antiques
                         </h3>
                     </Link>
-                    <Link href="#contacts">
+                    <a href="#contacts">
                         <h3 className={styles.test + " " + text_style}>
                             Контакты
                         </h3>
-                    </Link>
+                    </a>
                 </Row>
             </header>
         </Container>

@@ -1,9 +1,9 @@
 import styles from "./contacts.module.css";
 import Spacer from "@/components/std/Spacer";
 
-export default function ContactsSection() {
+export default function ContactsSection({ className }: { className: string }) {
     return (
-        <>
+        <div className={className} id="contacts">
             <h2>Как связаться?</h2>
             <section>
                 <Spacer top="2" />
@@ -18,8 +18,8 @@ export default function ContactsSection() {
                 </div>
                 <div className={styles.contact}>
                     <p className={styles.type}>Наш номер телефона</p>
-                    <a className={styles.text} href="+79111234567">
-                        +7 911 123 45 67
+                    <a className={styles.text} href="tel:+79111234567">
+                        +7 911 123 45 68
                     </a>
                 </div>
                 <div className={styles.contact}>
@@ -32,6 +32,6 @@ export default function ContactsSection() {
                     </a>
                 </div>
             </section>
-        </>
+        </div>
     );
 }

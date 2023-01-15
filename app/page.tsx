@@ -4,6 +4,7 @@ import Spacer from "@/components/std/Spacer";
 import BenefitsSection from "./BenefitsSection";
 import ContactsSection from "./ContactsSection";
 import FormSection from "./FormSection";
+import PositionList from "./PositionListSection";
 
 import styles from "./page.module.css";
 
@@ -23,23 +24,23 @@ export default function Home() {
                         должны быть своевременно верифицированы.
                     </p>
                     <Spacer top="2" />
-                    <button className={styles.button}>
-                        <a href="#contacts">Позвонить</a>
-                    </button>
+                    <a href="#contacts">
+                        <button className={styles.button}>Позвонить</button>
+                    </a>
                 </Container>
             </main>
 
             <Container wrapper>
                 <Spacer top="5" />
+                <PositionList />
+
+                <Spacer top="5" />
                 <BenefitsSection />
+
                 <Spacer top="5" />
                 <div className={styles.feedback}>
-                    <div className={styles.contacts}>
-                        <ContactsSection />
-                    </div>
-                    <div className={styles.form}>
-                        <FormSection />
-                    </div>
+                    <ContactsSection className={styles.contacts} />
+                    <FormSection className={styles.form} />
                 </div>
             </Container>
             <Spacer top="5" />
