@@ -10,6 +10,10 @@
     color: var(--dark);
 }
 
+.text:visited {
+    color: var(--dark);
+}
+
 .type {
     color: #7a7a7a;
     font-family: "PT serif";

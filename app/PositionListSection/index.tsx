@@ -1,10 +1,13 @@
+import Spacer from "@/components/std/Spacer";
 import CardLarge from "./CardLarge";
 import CardSmall from "./CardSmall";
 import styles from "./list.module.css";
+
 export default function PositionList() {
     return (
         <div>
             <h2>Какой антиквариат мы покупаем?</h2>
+            <Spacer top="2" />
             <section className={styles.section}>
                 <div className={styles.row}>
                     <div className={styles.cards_min}>

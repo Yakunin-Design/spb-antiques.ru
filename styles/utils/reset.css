@@ -8,6 +8,7 @@
 html {
     font-size: 15px;
     font-family: "PT serif", serif;
+    scroll-behavior: smooth;
 }
 
 body {
