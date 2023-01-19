@@ -2,7 +2,7 @@
     width: 100%;
     background: transparent;
     padding: 0.2rem 0;
-    border-bottom: 1px solid var(--dark);
+    border-bottom: 1px solid black;
     margin-top: 2rem;
     font-size: 15px;
     font-family: "PT serif";
@@ -11,6 +11,7 @@
 .input::placeholder {
     font-size: 15px;
     font-family: "PT serif";
+    color: #7a7a7a;
 }
 
 .photo {

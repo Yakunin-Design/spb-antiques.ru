@@ -32,7 +32,7 @@
     min-height: 172px;
 }
 
-@media (min-width: 580px) {
+/* @media (min-width: 580px) {
     .card:hover .text {
         transition: 0.5s all;
 
@@ -50,7 +50,7 @@
         opacity: 1;
         transition: 0.5s all;
     }
-}
+} */
 
 .price {
     background-color: #212121;

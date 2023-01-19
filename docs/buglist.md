@@ -1,19 +1,26 @@
 # Buglist for [spb-antiques.ru](.//README.md)
 
-## Benefits
-
--   icons are missing
+!hehe currently has no known bugs
 
 ## What do we buy
 
--   set image, names and price
--   mobile onclick animation
+-   select pictures
+    -   [ ] Книги
+    -   [ ] Рукописи
+    -   [ ] Собрания
+    -   [ ] Картины
+    -   [ ] Иконы
+    -   [ ] Графика
+    -   [ ] Игрушки
+    -   [ ] Открытки
+    -   [ ] Фотографии
+    -   [ ] Мебель
+    -   [ ] Фарфоровые изделия
+    -   [ ] И многое другое
+
 -   adaptive fix
+-   set dummy price & pictures
 
 ## Form
 
 -   send message in api
-
-## Header text (h2's)
-
--   header text

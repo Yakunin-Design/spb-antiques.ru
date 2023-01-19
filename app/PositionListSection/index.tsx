@@ -11,27 +11,27 @@ export default function PositionList() {
             <section className={styles.section}>
                 <div className={styles.row}>
                     <div className={styles.cards_min}>
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
+                        <CardSmall title="Книги" />
+                        <CardSmall title="Рукописи" />
+                        <CardSmall title="Собрания" />
                     </div>
-                    <CardLarge />
+                    <CardLarge title="Мебель" price={1000} />
                 </div>
                 <div className={styles.row + " " + styles.middle}>
-                    <CardLarge />
+                    <CardLarge title="Фарфоровые изделия" price={1000} />
                     <div className={styles.cards_min}>
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
+                        <CardSmall title="Картины" />
+                        <CardSmall title="Иконы" />
+                        <CardSmall title="Графика" />
                     </div>
                 </div>
                 <div className={styles.row}>
                     <div className={styles.cards_min}>
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
+                        <CardSmall title="Игрушки" />
+                        <CardSmall title="Открытки" />
+                        <CardSmall title="Фотографии" />
                     </div>
-                    <CardLarge />
+                    <CardLarge title="И многое другое" price={1000} />
                 </div>
             </section>
         </div>
