@@ -43,6 +43,10 @@
     cursor: pointer;
 }
 
+.send:disabled {
+    background-color: #3c3c3c;
+}
+
 .shorts {
     display: flex;
     flex-direction: column;

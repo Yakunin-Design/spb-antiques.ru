@@ -3,17 +3,22 @@ import styles from "./form.module.css";
 import form_controller from "./form_controller";
 
 export default function FormSection({ className }: { className: string }) {
-    const { form_data, handleChange, errors, submit } = form_controller();
+    const { form_data, handleChange, handleSubmit, errors } = form_controller();
 
     return (
         <div className={className}>
             <h2>Онлайн оценка</h2>
-            <form>
+            <form
+                onSubmit={handleSubmit}
+                method="POST"
+                encType="multipart/form-data"
+            >
                 <input
                     type="text"
                     name="position"
                     id=""
                     placeholder="Что хотите продать?"
+                    value={form_data.position}
                     className={
                         styles.input +
                         " " +
@@ -29,6 +34,7 @@ export default function FormSection({ className }: { className: string }) {
                         name="tel"
                         id=""
                         placeholder="Ваш телефон"
+                        value={form_data.tel}
                         className={
                             styles.input +
                             " " +
@@ -47,6 +53,7 @@ export default function FormSection({ className }: { className: string }) {
                             (errors.includes("mail") ? styles.error : {})
                         }
                         onChange={handleChange}
+                        value={form_data.mail}
                     />
                 </div>
                 <input
@@ -54,6 +61,7 @@ export default function FormSection({ className }: { className: string }) {
                     name="photo"
                     id="fileUpload"
                     accept="image/*"
+                    multiple
                     className={styles.hiden}
                     onChange={handleChange}
                 />
@@ -62,9 +70,9 @@ export default function FormSection({ className }: { className: string }) {
                         {form_data.photo.length} фото
                     </p>
                 </label>
-                <p onClick={submit} className={styles.send}>
+                <button type="submit" id="send" className={styles.send}>
                     Отправить
-                </p>
+                </button>
             </form>
         </div>
     );

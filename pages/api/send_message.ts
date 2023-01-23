@@ -1,15 +1,34 @@
 // ts-nocheck ignores all ts errors in the file
 // @ts-nocheck
 
-// ts-ignore ignores any ts errors on the next line
-// @ts-ignore
+import formidable from "formidable";
+import { sendMessages, sendPhoto } from "@/lib/tgBot";
+import TelegramBot from "node-telegram-bot-api";
 
-import { NextRequest, NextResponse } from "next/server";
+export const config = {
+    api: {
+        bodyParser: false,
+    },
+};
 
-export default async function add(req: NextRequest, res: NextResponse) {
-    const { position, tel, mail, photo } = JSON.parse(req.body);
+const token = process.env.TOKEN;
+const bot = new TelegramBot(token, { polling: true });
 
-    console.log(position);
+export default async (req, res) => {
+    const form = new formidable.IncomingForm();
+    const files = [];
+    const fields = {};
 
-    res.status(200).send({ res: "ok" });
-}
+    form.on("field", function (field, value) {
+        fields[field] = value;
+    })
+        .on("file", function (field, file) {
+            files.push(file);
+        })
+        .on("end", function () {
+            sendPhoto(bot, files);
+            sendMessages(bot, fields);
+        });
+    form.parse(req);
+    res.send(200);
+};

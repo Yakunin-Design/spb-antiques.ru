@@ -32,7 +32,7 @@
 @font-face {
     font-family: "Gilroy";
     font-weight: 500;
-    src: url("../../assets/fonts/Gilroy-Medium.woff2") format("woff2");
+    src: url("../../assets/fonts/Gilroy-Medium.ttf") format("truetype");
 }
 
 /* Type */

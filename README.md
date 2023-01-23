@@ -13,3 +13,19 @@ You can find [Buglist here](./docs/buglist.md)
 ## Demo
 
 Currently demo version can be viewed here: [yakunin.io](https://yakunin.io)
+
+## Start
+
+For starting install packages (use cmd)
+
+    yarn
+
+then create file <b>.env</b> and paste
+
+    TOKEN="\<YourTelegramBotToken>"
+
+    CHAT_ID="\<YourChatId>"
+
+and finally run project (use cmd)
+
+    yarn dev

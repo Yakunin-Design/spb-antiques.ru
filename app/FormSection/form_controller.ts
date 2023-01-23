@@ -17,49 +17,84 @@ export default function form_controller() {
 
     const [errors, set_errors] = useState<Array<String>>([]);
 
-    function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-        const { name, value, files } = event.target;
-
-        if (name === "photo") {
+    function readFile(file: Blob) {
+        return new Promise((resolve, reject) => {
             const reader = new FileReader();
             reader.addEventListener("load", function () {
-                set_form_data(prev => {
-                    return {
-                        ...prev,
-                        [name]: [...prev.photo, this.result],
-                    };
-                });
+                if (this.result) {
+                    set_form_data(prev => {
+                        return {
+                            ...prev,
+                            photo: [...prev.photo, this.result],
+                        };
+                    });
+                }
             });
-        }
-
-        set_form_data(prev => {
-            return { ...prev, [name]: value };
+            reader.readAsDataURL(file);
         });
     }
 
-    function submit() {
+    async function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+        const { name, value, files } = event.target;
+
+        if (name == "photo") {
+            if (files) {
+                //@ts-ignore
+                const f_list = [...(files as Array<Blob>)];
+                await Promise.all(
+                    f_list.map(f => {
+                        return readFile(f);
+                    })
+                );
+            }
+        } else {
+            set_form_data(prev => {
+                return {
+                    ...prev,
+                    [name]: value,
+                };
+            });
+        }
+    }
+
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        //@ts-ignore
+        const { position, photo, mail, tel } = event.target;
+
         let error = [];
-        if (form_data.position == "") error.push("position");
-        if (form_data.mail == "" && form_data.tel == "") {
+        if (position.value == "") error.push("position");
+        if (mail.value == "" && tel.value == "") {
             error.push("mail");
             error.push("tel");
         }
 
         if (error.length > 0) {
             set_errors(error);
-        } else {
-            set_errors([]);
-            fetch("/api/send_message", {
-                method: "POST",
-                body: JSON.stringify(form_data),
-            });
+            return;
         }
+        set_errors([]);
+
+        const form = new FormData(event.target as HTMLFormElement);
+        console.log(form);
+        const send_form_data = await fetch("/api/send_message", {
+            method: "POST",
+            body: form,
+        });
+        set_form_data({
+            position: "",
+            tel: "",
+            mail: "",
+            photo: [],
+        });
+        //@ts-ignore
+        document.querySelector("#send").innerHTML = "Cпасибо!";
     }
 
     return {
         form_data,
         errors,
         handleChange,
-        submit,
+        handleSubmit,
     };
 }
