@@ -22,9 +22,9 @@ For starting install packages (use cmd)
 
 then create file <b>.env</b> and paste
 
-    TOKEN="\<YourTelegramBotToken>"
+    TOKEN="<YourTelegramBotToken>"
 
-    CHAT_ID="\<YourChatId>"
+    CHAT_ID="<YourChatId>"
 
 and finally run project (use cmd)
 
