@@ -88,7 +88,10 @@ export default function form_controller() {
             photo: [],
         });
         //@ts-ignore
-        document.querySelector("#send").innerHTML = "Cпасибо!";
+        const input = document.querySelector("#send") as HTMLInputElement;
+        input.innerHTML = "Cпасибо!";
+        input.disabled = true;
+        input.style.cursor = "default";
     }
 
     return {

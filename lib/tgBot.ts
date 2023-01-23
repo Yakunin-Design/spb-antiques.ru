@@ -7,6 +7,16 @@ type text_data = {
 };
 
 const chat_id = process.env.CHAT_ID!;
+const token = process.env.TOKEN!;
+
+let bot: TelegramBot | null = null;
+
+const get_bot = () => {
+    if (!bot) {
+        bot = new TelegramBot(token);
+    }
+    return bot;
+};
 
 const message = {
     name: "Название: ",
@@ -14,7 +24,7 @@ const message = {
     mail: "\nПочта: ",
 };
 
-const sendMessages = (bot: TelegramBot, text_data: text_data) => {
+const sendMessages = (text_data: text_data) => {
     const msg =
         "Новое Предлжение! \n\n\n" +
         message.name +
@@ -24,12 +34,16 @@ const sendMessages = (bot: TelegramBot, text_data: text_data) => {
         message.mail +
         text_data.mail;
 
+    const bot = get_bot();
+
     bot.sendMessage(chat_id, msg).then(() => {
         console.log("Text sended");
     });
 };
 
-const sendPhoto = (bot: TelegramBot, imgUrls: any) => {
+const sendPhoto = (imgUrls: any) => {
+    const bot = get_bot();
+
     imgUrls.forEach((img: any) => {
         bot.sendPhoto(chat_id, img.filepath).then(() => {
             console.log("Photo sended");

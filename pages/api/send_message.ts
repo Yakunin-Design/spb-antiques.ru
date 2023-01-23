@@ -3,16 +3,12 @@
 
 import formidable from "formidable";
 import { sendMessages, sendPhoto } from "@/lib/tgBot";
-import TelegramBot from "node-telegram-bot-api";
 
 export const config = {
     api: {
         bodyParser: false,
     },
 };
-
-const token = process.env.TOKEN;
-const bot = new TelegramBot(token, { polling: true });
 
 export default async (req, res) => {
     const form = new formidable.IncomingForm();
@@ -26,8 +22,8 @@ export default async (req, res) => {
             files.push(file);
         })
         .on("end", function () {
-            sendPhoto(bot, files);
-            sendMessages(bot, fields);
+            sendPhoto(files);
+            sendMessages(fields);
         });
     form.parse(req);
     res.send(200);

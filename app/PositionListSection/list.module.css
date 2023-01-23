@@ -31,12 +31,25 @@
 @media (min-width: 580px) {
     .cards_min {
         display: flex;
-        gap: 1em;
+        gap: 1.25em;
     }
 }
 
 @media (min-width: 1100px) {
     .row {
         flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1150px) {
+    .cards_min {
+        gap: 2.1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cards_min {
+        gap: 1.25em;
     }
 }
