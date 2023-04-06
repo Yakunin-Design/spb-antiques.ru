@@ -1,3 +1,4 @@
+import conversion_send from "@/lib/conversion_send";
 import { useState } from "react";
 
 type form_data = {
@@ -87,6 +88,7 @@ export default function form_controller() {
             mail: "",
             photo: [],
         });
+        conversion_send("form");
         //@ts-ignore
         const input = document.querySelector("#send") as HTMLInputElement;
         input.innerHTML = "Cпасибо!";

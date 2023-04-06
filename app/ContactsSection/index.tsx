@@ -1,5 +1,7 @@
+"use client";
 import styles from "./contacts.module.css";
 import Spacer from "@/components/std/Spacer";
+import conversion_send from "@/lib/conversion_send";
 
 export default function ContactsSection({ className }: { className: string }) {
     return (
@@ -12,13 +14,22 @@ export default function ContactsSection({ className }: { className: string }) {
                     <a
                         className={styles.text}
                         href="mailto: spb.antikvariat@gmail.com"
+                        onClick={() => {
+                            conversion_send("email");
+                        }}
                     >
                         spb.antikvariat@gmail.com
                     </a>
                 </div>
                 <div className={styles.contact}>
                     <p className={styles.type}>Наш номер телефона</p>
-                    <a className={styles.text} href="tel:+79119588071">
+                    <a
+                        className={styles.text}
+                        href="tel:+79119588071"
+                        onClick={() => {
+                            conversion_send("tel");
+                        }}
+                    >
                         +7 (911) 958 80 71
                     </a>
                 </div>
@@ -28,6 +39,9 @@ export default function ContactsSection({ className }: { className: string }) {
                         className={styles.text}
                         target="_blank"
                         href="https://api.whatsapp.com/send?phone=79119588071"
+                        onClick={() => {
+                            conversion_send("WhatsUp");
+                        }}
                     >
                         whats up
                     </a>

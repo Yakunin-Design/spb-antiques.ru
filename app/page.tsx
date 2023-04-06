@@ -6,9 +6,13 @@ import ContactsSection from "./ContactsSection";
 import FormSection from "./FormSection";
 import PositionList from "./PositionListSection";
 
+import incoming_send from "@/lib/incoming_send";
+
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function Home({ searchParams }: any) {
+    searchParams.s == "ya" ? incoming_send("ya") : incoming_send();
+
     return (
         <>
             <main className={styles.main}>
