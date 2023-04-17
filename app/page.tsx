@@ -6,13 +6,9 @@ import ContactsSection from "./ContactsSection";
 import FormSection from "./FormSection";
 import PositionList from "./PositionListSection";
 
-import incoming_send from "@/lib/incoming_send";
-
 import styles from "./page.module.css";
 
 export default function Home({ searchParams }: any) {
-    searchParams.s == "ya" ? incoming_send("ya") : incoming_send();
-
     return (
         <>
             <main className={styles.main}>
@@ -45,7 +41,10 @@ export default function Home({ searchParams }: any) {
                 <Spacer top="5" />
                 <div className={styles.feedback}>
                     <ContactsSection className={styles.contacts} />
-                    <FormSection className={styles.form} />
+                    <FormSection
+                        className={styles.form}
+                        searchParams={searchParams}
+                    />
                 </div>
             </Container>
             <Spacer top="5" />
