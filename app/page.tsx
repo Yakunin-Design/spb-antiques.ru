@@ -8,7 +8,7 @@ import PositionList from "./PositionListSection";
 
 import styles from "./page.module.css";
 
-export default function Home({ searchParams }: any) {
+export default function Home() {
     return (
         <>
             <main className={styles.main}>
@@ -41,10 +41,7 @@ export default function Home({ searchParams }: any) {
                 <Spacer top="5" />
                 <div className={styles.feedback}>
                     <ContactsSection className={styles.contacts} />
-                    <FormSection
-                        className={styles.form}
-                        searchParams={searchParams}
-                    />
+                    <FormSection className={styles.form} />
                 </div>
             </Container>
             <Spacer top="5" />

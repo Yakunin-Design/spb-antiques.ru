@@ -2,17 +2,14 @@
 import incoming_send from "@/lib/incoming_send";
 import styles from "./form.module.css";
 import form_controller from "./form_controller";
+import { useSearchParams } from "next/navigation";
 
-export default function FormSection({
-    className,
-    searchParams,
-}: {
-    className: string;
-    searchParams: any;
-}) {
+export default function FormSection({ className }: { className: string }) {
     const { form_data, handleChange, handleSubmit, errors } = form_controller();
 
-    searchParams.s == "ya" ? incoming_send("ya") : incoming_send();
+    const searchParams = useSearchParams().get("s");
+    searchParams == "ya" ? incoming_send("ya") : incoming_send();
+
     return (
         <div className={className}>
             <h2>Онлайн оценка</h2>
